@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kishan's Accounting Academy</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      padding: 20px;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #2193b0, #6dd5ed);
+      color: white;
+      padding: 30px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .section {
+      margin: 40px 0;
+      padding: 30px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #ff6f00;
+      margin-bottom: 20px;
+      font-size: 28px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      border-bottom: 2px solid #ffb300;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+    form input, form select, form textarea, form button {
+      display: block;
+      width: 100%;
+      margin: 12px 0;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    form button {
+      background-color: #ff6f00;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    form button:hover {
+      background-color: #e65100;
+    }
+    .gallery {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      border-radius: 12px;
+      transition: transform 0.4s, box-shadow 0.4s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      object-fit: cover;
+    }
+    .gallery img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .experience-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kishan's Accounting Academy</h1>
+    <p>Learn from the best – 10+ years of teaching experience | Contact: 9665502476 | Email: rs1274389@gmail.com</p>
+    <img class="experience-image" src="https://i.ibb.co/nM352KCM/finance-exam-12-th-800x400.png" alt="finance experience image">
+  </header>
+
+  <div class="section">
+    <h2>Courses Offered</h2>
+    <ul>
+      <li>11th & 12th Commerce – All Subjects</li>
+      <li>B.Com, BBA, BCCA</li>
+      <li>M.Com, MBA</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Admission Form</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="number" placeholder="Age" required>
+      <input type="tel" placeholder="Contact Number" required>
+      <input type="text" placeholder="College Name" required>
+      <select required>
+        <option value="">Select Class</option>
+        <option>11th Commerce</option>
+        <option>12th Commerce</option>
+        <option>B.Com</option>
+        <option>BBA</option>
+        <option>BCCA</option>
+        <option>M.Com</option>
+        <option>MBA</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="section">
+    <h2>Feedback / Complaint</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <textarea placeholder="Your Complaint or Feedback" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <div class="section">
+    <h2>Our Classes in Action</h2>
+    <div class="gallery">
+      <img src="https://i.ibb.co/23ZqfHHX/db6079f3c0c92cf00e4c303ff82aac75.jpg" alt="Classroom 2">
+      <img src="https://i.ibb.co/csHvFmn/f07805e8bc01eda6387abf44b6f794ef.jpg" alt="Classroom 3">
+    </div>
+  </div>
+
+</body>
+</html>
