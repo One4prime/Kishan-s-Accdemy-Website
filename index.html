@@ -1,91 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="4zyhgsWUzvQc8bHn0AtCOvmUN0Yck13WhWEW2gWrK0o" />
-  <title>Kishan's Academy Login</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kishan's Accounting Academy - Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Welcome to <span>Kishan's Academy</span></h2>
+      <p>Login to continue</p>
+      <form id="loginForm">
+        <input type="email" id="email" placeholder="Enter your Email" required />
+        <input type="password" id="password" placeholder="Enter your Password" required />
+        <button type="submit">Login</button>
+      </form>
+      <p class="note">Only registered students can login</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      // Dummy check — you can replace with real auth later
+      if (email && password) {
+        window.location.href = "main.html";
+      } else {
+        alert("Invalid email or password");
+      }
+    });
+  </script>
+
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #2980b9, #6dd5fa);
       height: 100vh;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
     }
+
+    .login-container {
+      animation: fadeIn 2s ease;
+    }
+
     .login-box {
       background-color: white;
       padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      width: 350px;
-      animation: fadeInUp 1s ease;
-    }
-    @keyframes fadeInUp {
-      from { transform: translateY(40px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    .login-box h2 {
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
       text-align: center;
-      margin-bottom: 25px;
-      color: #2e86de;
+      width: 300px;
     }
-    input {
+
+    .login-box h2 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    .login-box h2 span {
+      color: #2980b9;
+    }
+
+    .login-box p {
+      font-size: 14px;
+      color: #7f8c8d;
+    }
+
+    .login-box input {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border-radius: 8px;
+      padding: 12px 10px;
+      margin: 12px 0;
       border: 1px solid #ccc;
-      box-sizing: border-box;
+      border-radius: 8px;
+      font-size: 14px;
     }
-    button {
+
+    .login-box button {
       width: 100%;
-      padding: 10px;
-      background-color: #2e86de;
-      color: white;
+      padding: 12px;
+      background: #2980b9;
       border: none;
+      color: white;
+      font-size: 16px;
       border-radius: 8px;
       cursor: pointer;
-      font-weight: bold;
       transition: background 0.3s ease;
     }
-    button:hover {
-      background-color: #1e6bb8;
-    }
-    .error {
-      color: red;
-      text-align: center;
-      display: none;
-    }
-  </style>
-</head>
-<body>
-  <div class="login-box">
-    <h2>Kishan's Academy Login</h2>
-    <form onsubmit="login(event)">
-      <input type="email" id="email" placeholder="Enter your Email" required>
-      <input type="password" id="password" placeholder="Enter your Password" required>
-      <button type="submit">Login</button>
-      <p class="error" id="error-msg">Invalid email or password</p>
-    </form>
-  </div>
 
-  <script>
-    function login(e) {
-      e.preventDefault();
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
+    .login-box button:hover {
+      background: #1c5980;
+    }
 
-      // For demo purposes - all login allowed
-      if (email && password) {
-        window.location.href = "main.html";
-      } else {
-        document.getElementById('error-msg').style.display = 'block';
+    .note {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #888;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
-  </script>
+  </style>
 </body>
 </html>
